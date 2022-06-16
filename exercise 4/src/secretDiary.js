@@ -15,7 +15,7 @@ class SecretDiary {
     }
 
     addEntry(entry) {
-        if (Status.status) {
+        if (Status.unlockDiary) {
             this.entries.push(entry)
             return this.entries
         }
@@ -23,7 +23,7 @@ class SecretDiary {
     }
 
     getEntries() {
-        if (Status.status) {
+        if (Status.unlockDiary) {
             return this.entries
         }
         throw new Error('Diary Locked')

@@ -8,11 +8,11 @@ describe('Secret Diary', () => {
         secretDiary = new SecretDiary()
     })
 
-    it('returns "diary is locked" if trying to add an entry', () => {
+    it('throws error if trying to add an entry', () => {
         expect(() => secretDiary.addEntry('blah')).toThrow(new Error('Diary Locked'))
     })
 
-    it('returns "diary is locked" if trying to get all the entries', () => {
+    it('throws error if trying to get all the entries', () => {
         expect(() => secretDiary.getEntries()).toThrow(new Error('Diary Locked'))
     })
 

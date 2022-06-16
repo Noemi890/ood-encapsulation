@@ -1,15 +1,15 @@
 class Status {
 
     constructor() {
-        this.status = false
+        this.unlockDiary = false
     }
 
     static lock() {
-        return this.status = false
+        return this.unlockDiary = false
     }
 
     static unlock() {
-        return this.status = true
+        return this.unlockDiary = true
     }
 
 }
